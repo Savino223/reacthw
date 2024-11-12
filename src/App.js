@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <p>nigga</p>
+      <p>im alone again</p>
     </div>
   );
 }
