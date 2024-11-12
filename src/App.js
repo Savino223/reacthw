@@ -1,7 +1,9 @@
+import ProductCard from "./components";
+
 function App() {
   return (
     <div>
-      <p>im alone again</p>
+      <ProductCard/>
     </div>
   );
 }
