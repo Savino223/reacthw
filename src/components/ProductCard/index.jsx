@@ -1,14 +1,17 @@
 import "./productcard.css";
 
 export function ProductCard(props) {
-    const{image, category, name, price } = props.data;
+    const{image, category, title, price } = props.data;
 
     return(
         <div className="product-card">
-            <img width="200" src={image} alt=""/>
-            <div>{category}</div>
-            <h4>{name}</h4>
-            <div>{price}</div>
+            <img className="product-image" src={image} alt="" />
+            <div className="product-category">{category}</div>
+            <p className="product-title">{title}</p>
+            <div className="price_and_button">
+                <div className="product-price">${price}</div>
+                <button className="add-to-cart-btn">Add to Card</button>
+            </div>
         </div>
     );
 }

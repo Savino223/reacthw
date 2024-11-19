@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", padding: "16px" }}>
       {loading && <div>...Loading</div>}
       {
         products.map((product) => (
