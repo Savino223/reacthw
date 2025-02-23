@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ProductList from "./components/ProductList";
 import FilterButtons from "./components/FilterButton";
 import Spinner from "./components/Spinner";
+import Cart from "./components/Cart";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,21 +22,14 @@ function App() {
 
   const handleFilterChange = (category) => {
     setCategory(category);
-    if (category === "All") {
-      setFilteredProducts(products);
-    } else {
-      setFilteredProducts(products.filter((product) => product.category === category));
-    }
+    setFilteredProducts(category === "All" ? products : products.filter((p) => p.category === category));
   };
 
   return (
     <div style={{ padding: "16px" }}>
       <FilterButtons selectedCategory={category} onFilterChange={handleFilterChange} />
-      {loading ? (
-        <Spinner />
-      ) : (
-        <ProductList products={filteredProducts} />
-      )}
+      {loading ? <Spinner /> : <ProductList products={filteredProducts} />}
+      <Cart />
     </div>
   );
 }

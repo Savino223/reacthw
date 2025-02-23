@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.cart {
+    margin: 20px;
+    font-family: "Inter", sans-serif;
+    margin-left: 3%;
+}
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.cart-card {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: transform 0.2s ease-in-out;
+    gap: 20px;
+}
+
+.cart-card:hover {
+    transform: scale(1.02);
+}
+
+.cart-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-category {
+    font-size: 14px;
+    color: rgb(0, 106, 255);
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.cart-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.cart-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgb(0, 106, 255);
+    padding: 4px 12px;
+    border-radius: 15px;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.cart-controls button {
+    background-color: white;
+    color: rgb(0, 106, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-controls span {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 106, 255);
+    min-width: 20px;
+    text-align: center;
+}
+
+.clear-cart {
+  color: white;
+  background-color: red;
+  font-size: 16px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+}
